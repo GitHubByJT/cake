@@ -1,0 +1,859 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>商品详情</title>-->
+<!--    <script src="js/jquery.js"></script>-->
+<!--    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">-->
+<!--    <link type="text/css" rel="stylesheet" href="css/reset.css">-->
+<!--    <link type="text/css" rel="stylesheet" href="css/main.css">-->
+<!--    <script>-->
+<!--        let url = "";-->
+<!--        $(function () {-->
+
+<!--        });-->
+<!--    </script>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="headerBar">-->
+<!--        <div class="topBar">-->
+<!--            <div class="comWidth">-->
+<!--                <div class="leftArea">-->
+<!--                    <a href="#" >a</a>-->
+<!--&lt;!&ndash;                    最上面导航条:登录注册等&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="logoBar">-->
+
+<!--    &lt;!&ndash;                logo条&ndash;&gt;-->
+<!--    &lt;!&ndash;                搜索栏&ndash;&gt;-->
+
+<!--        </div>-->
+
+<!--        <div class="navBox">-->
+
+<!--    &lt;!&ndash;                二级导航&ndash;&gt;-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    下面详情    &ndash;&gt;-->
+<!--    <div class="userPosition comWidth">-->
+<!--        <ol class="breadcrumb">-->
+<!--    &lt;!&ndash;            路劲导航条&ndash;&gt;-->
+<!--            <li><a href="#">首页</a><span>&nbsp;&gt;&nbsp;</span></li>-->
+<!--            <li><a href="#">蛋糕</a><span>&nbsp;&gt;&nbsp;</span></li>-->
+<!--            <li class="active"><a>戚风蛋糕</a></li>-->
+<!--        </ol>-->
+<!--    </div>-->
+
+<!--<div class="description_info comWidth">-->
+<!--    <div class="description clearfix">-->
+<!--        <div class="leftArea">-->
+<!--            <div class="description_img">-->
+<!--&lt;!&ndash;                <div class="big">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="images/doggy.gif" alt="" />&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                <ul class="clearfix" style="height:340px; text-align:center;">-->
+<!--                    <li><a href="#"><img src="images/nnn.jpg" class="active" alt="" style="height: 330px;width: 300px;padding-top: 6px"/></a></li>-->
+<!--&lt;!&ndash;                    <li><a href="#"><img src="images/nnn.jpg" alt="" /></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#"><img src="images/nnn.jpg" alt="" /></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#"><img src="images/nnn.jpg" alt="" /></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li><a href="#"><img src="images/nnn.jpg" alt="" /></a></li>&ndash;&gt;-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="rightArea">-->
+<!--            <div class="des_content">-->
+<!--                <h2 class="des_content_tit">戚风蛋糕</h2>-->
+<!--                <p style="padding-left: 30px;padding-bottom: 15px">戚风蛋糕是大便戚风蛋糕是大便</p>-->
+<!--                <div class="dl clearfix">-->
+<!--                    <div class="dt">价格</div>-->
+<!--                    <div class="dd"><span class="des_money"><em>￥</em>999.00</span></div>-->
+<!--                </div>-->
+
+<!--                <div class="des_position">-->
+<!--                    <div class=" clearfix">-->
+<!--                        <div class="dt">送到</div>-->
+<!--                        <div class="clearfix">-->
+<!--                            <textarea style="background-color: white;"></textarea>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="dt">-->
+<!--                        <div class="clearfix">数量-->
+<!--                        <input type="text"/>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="shop_buy">-->
+<!--                    <a href="#" class="shopping_btn"></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>宝贝详情</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        i {
+            font-style: normal;
+        }
+
+        #good {
+            box-sizing: border-box;
+            width: 990px;
+            height: 600px;
+            display: flex;
+            justify-content: space-between;
+            margin: 100px auto 0;
+            border: 1px solid #e8e8e8;
+            padding-top: 25px;
+        }
+
+        #good .right {
+            box-sizing: border-box;
+            width: 530px;
+            height: 100%;
+            padding-right: 20px;
+        }
+
+        #good .right h2 {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 10px 12px;
+        }
+
+        #good .right .right-top {
+            width: 100%;
+        }
+
+        #good .right .right-top div:nth-child(1) {
+            height: 68px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding-left: 8px;
+            background-color: #fff2e8;
+        }
+
+        #good .right .right-top div:nth-child(1) p:nth-child(1) {
+            flex: 1;
+            display: flex;
+        }
+
+        #good .right .right-top div:nth-child(1) p:nth-child(1) span:nth-child(1) {
+            width: 69px;
+            font-size: 14px;
+            line-height: 36px;
+            height: 36px;
+            color: red;
+        }
+
+        #good .right .right-top div:nth-child(1) p:nth-child(1) span:nth-child(2) {
+            flex: 1;
+            font-size: 32px;
+            line-height: 36px;
+            height: 36px;
+            color: red;
+        }
+
+        #good .right .right-top div:nth-child(1) p:nth-child(2) {
+            width: 170px;
+            display: flex;
+            text-align: center;
+        }
+
+        #good .right .right-top div:nth-child(1) p:nth-child(2) span {
+            width: 50%;
+            color: #6c6c6c;
+        }
+
+        #good .right .right-top div:nth-child(1) p:nth-child(2) span:nth-child(1) {
+            border-right: 1px solid #ffe4d0;
+        }
+
+        #good .right .right-top div:nth-child(2) {
+            width: 100%;
+            height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        #good .right .right-top div:nth-child(2) span:nth-child(1) {
+            width: 70px;
+            padding-left: 8px;
+            color: #6c6c6c;
+        }
+
+        #good .right .right-top div:nth-child(2) span {
+            font-size: 13px;
+        }
+
+        #good .right .right-top div:nth-child(2) select {
+            width: 80px;
+            margin: 0 8px;
+        }
+
+        #good .right form fieldset {
+            width: 100%;
+            height: 290px;
+            border: none;
+            border-top: 1px dashed #d9d9d9;
+        }
+
+        #good .right form legend {
+            font-size: 13px;
+            color: #6c6c6c;
+            text-align: right;
+        }
+
+        #good .right form div {
+            padding-left: 8px;
+        }
+
+        #good .right form div:nth-of-type(1) {
+            display: flex;
+            margin-top: 7px;
+            font-size: 14px;
+        }
+
+        #good .right form p {
+            color: #6c6c6c;
+            width: 67px;
+        }
+
+        #good .right form div:nth-of-type(2) {
+            display: flex;
+            margin: 25px 0;
+            font-size: 14px;
+        }
+
+        #good .right form div:nth-of-type(1) .btn {
+            padding: 11px 10px;
+            border: 1px solid #dcdcdc;
+            margin-left: 7px;
+            cursor: pointer;
+        }
+
+        #good .right form div:nth-of-type(2) .btn {
+            padding: 14px 7px;
+            border: 1px solid #dcdcdc;
+            margin-left: 7px;
+            cursor: pointer;
+        }
+
+        #good .right form div:nth-of-type(1) .active,
+        #good .right form div:nth-of-type(2) .active {
+            border: 1px solid red;
+        }
+
+        #good .right form div:nth-of-type(3) {
+            display: flex;
+        }
+
+        #good .right form div:nth-of-type(3) span:nth-child(1) {
+            color: #6c6c6c;
+            width: 74px;
+            line-height: 35px;
+        }
+
+        #good .right form div:nth-of-type(3) #add,
+        #good .right form div:nth-of-type(3) #dis {
+            width: 35px;
+            box-sizing: border-box;
+            height: 35px;
+            font-size: 18px;
+        }
+
+        #good .right form div:nth-of-type(3) #num {
+            width: 61px;
+            height: 35px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        #good .right form div:nth-of-type(3) span:last-child {
+            font-size: 13px;
+            line-height: 35px;
+            margin-left: 11px;
+        }
+
+        #good .right form div:nth-of-type(4) {
+            margin-top: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #good .right form div:nth-of-type(4) span:first-child {
+            display: inline-block;
+            width: 74px;
+            line-height: 24px;
+        }
+
+        #good .right form div:nth-of-type(4) span:last-child {
+            display: inline-block;
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        #good .right .buy div {
+            height: 50px;
+            line-height: 50px;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        #good .right .buy {
+            box-sizing: border-box;
+            padding-left: 8px;
+        }
+
+        #good .right .buy #buy {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 170px;
+            color: #e5511d;
+            background-color: #ffe4d0;
+            border: 1px solid #f0cab6;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        #good .right .buy #put {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 227px;
+            color: #e5511d;
+            border: 1px solid #ff4400;
+            background-color: #ff4400;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #good .right .buy p {
+            font-size: 14px;
+            color: #6c6c6c;
+        }
+
+        #good .right .buy p span:nth-child(1) {
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        #hsy {
+            /* box-sizing: border-box; */
+            width: 988px;
+            height: 200px;
+            display: flex;
+            margin: 0 auto;
+            border: 1px solid #e8e8e8;
+            overflow: auto;
+        }
+
+        #hsy li {
+            flex: 1;
+            padding-top: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        #hsy li img {
+            width: 120px;
+            height: 120px;
+        }
+
+        #hsy li h2 {
+            font-size: 12px;
+            line-height: 12px;
+            margin: 8px 0;
+            width: 180px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        #hsy li p {
+            color: #ff4400;
+        }
+    </style>
+</head>
+
+<body>
+<div id="good">
+    <!-- <div id="left">
+        <div class="img">
+            <img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/50454948/TB28zhzmrArBKNjSZFLXXc_dVXa_!!50454948.jpg_580x580Q90.jpg_.webp"
+                alt="">
+            <div class="shade"></div>
+            <div class="bigger">
+                <div>
+                    <img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/50454948/TB28zhzmrArBKNjSZFLXXc_dVXa_!!50454948.jpg_580x580Q90.jpg_.webp"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <div class="leftbot">
+            <input type="button" value="&lt;" class="prev">
+            <ul class='smallPic'>
+                <li><img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/50454948/TB28zhzmrArBKNjSZFLXXc_dVXa_!!50454948.jpg_580x580Q90.jpg_.webp"
+                        alt=""></li>
+                <li><img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/50454948/TB28zhzmrArBKNjSZFLXXc_dVXa_!!50454948.jpg_580x580Q90.jpg_.webp"
+                        alt=""></li>
+                <li><img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/50454948/TB28zhzmrArBKNjSZFLXXc_dVXa_!!50454948.jpg_580x580Q90.jpg_.webp"
+                        alt=""></li>
+                <li><img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/50454948/TB28zhzmrArBKNjSZFLXXc_dVXa_!!50454948.jpg_580x580Q90.jpg_.webp"
+                        alt=""></li>
+                <li><img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/50454948/TB28zhzmrArBKNjSZFLXXc_dVXa_!!50454948.jpg_580x580Q90.jpg_.webp"
+                        alt=""></li>
+            </ul>
+            <input type="button" value="&gt;" class="next">
+        </div>
+    </div>
+    <div class="right">
+        <h2>英雄联盟LOL LOVE-璀璨心意925银嵌施华洛世奇水晶项链 官方授权</h2>
+        <div class="right-top">
+            <div>
+                <p>
+                    <span>价格</span>
+                    <span id="price">￥99999</span>
+                </p>
+                <p>
+                    <span>14<br>累计评论</span>
+                    <span>9<br>交易成功</span>
+                </p>
+            </div>
+            <div>
+                <span>运费</span>
+                <span id="ard">广东广州 至 </span>
+                <select name="" id="">
+                    <option value="gdgd">广东广州</option>
+                </select>
+                <span>快递: ￥0.00</span>
+            </div>
+        </div>
+        <form action="">
+            <fieldset>
+                <legend>尺码助手</legend>
+                <div>
+                    <p>尺码</p>
+                    <span class="btn active">S</span>
+                    <span class="btn">M</span>
+                </div>
+                <div>
+                    <p>颜色</p>
+                    <span class="btn active">暗玫紫</span>
+                    <span class="btn">香芒黄</span>
+                </div>
+                <div>
+                    <span>数量</span>
+                    <input type="button" value="-" id="add">
+                    <input type="text" id="num" value="1">
+                    <input type="button" value="+" id="dis">
+                    <span> 件 (库存20件)</span>
+                </div>
+                <div>
+                    <span>总价格:</span><span id="total">￥xxx</span>
+                </div>
+            </fieldset>
+        </form>
+        <div class="buy">
+            <div id="buy">立即购买</div>
+            <div id="put">加入购物车</div>
+            <p>
+                <span>承诺</span>
+                <span>7天无理由</span>
+            </p>
+            <p>
+                <span>支付 </span>
+                <span>蚂蚁花呗 </span>
+                <span>信用卡支付 </span>
+                <span>集分宝</span>
+            </p>
+        </div>
+    </div> -->
+</div>
+<ul id="hsy">
+    <!-- <li>
+        <img src="../img/i1.webp" alt="">
+        <h2>英雄联盟LOL LOVE-璀璨心意925银嵌施华洛世奇水晶项链 官方授权</h2>
+        <p>￥ 888</p>
+    </li>
+    <li>
+        <img src="../img/i2.webp" alt="">
+        <h2>英雄联盟LOL LOVE-璀璨心意925银嵌施华洛世奇水晶项链 官方授权</h2>
+        <p>￥ 888</p>
+    </li>
+    <li>
+        <img src="../img/i3.webp" alt="">
+        <h2>英雄联盟LOL LOVE-璀璨心意925银嵌施华洛世奇水晶项链 官方授权</h2>
+        <p>￥ 888</p>
+    </li>
+    <li>
+        <img src="../img/i4.webp" alt="">
+        <h2>英雄联盟LOL LOVE-璀璨心意925银嵌施华洛世奇水晶项链 官方授权</h2>
+        <p>￥ 888</p>
+    </li> -->
+</ul>
+</body>
+<script src="../weicommon.js"></script>
+<script src="largeglass.js"></script>
+<script>
+    /*
+        需求：当进来详情页后，用location获取url的参数（id），并用这个id与arr里面的id对比，找到匹配的值，然后把对应的数据渲染到页面上，渲染完成后，再获取需要设置功能的节点位置，然后给他们设置事件
+    */
+    (function () {
+
+        let hsy = document.getElementById('hsy');
+        let good = document.getElementById('good');
+        let str = location.search.slice(1);//获得传过来的参数，但是有个?，需要去掉
+        let url = strToObj(str);
+
+        function toCar(obj) {//加入购物车
+            ajax({
+                type: 'post',
+                data: {
+                    gid: obj.gid,
+                    size: obj.size,
+                    color: obj.color,
+                    num: obj.num,
+                    uname: obj.uname
+                },
+                url: '../api/tocar.php',
+                success: str => {
+                    console.log(str);
+                    // alert(str);
+                }
+            });
+        }
+
+        function setzuji() {
+            let str = localStorage.gid;
+            // console.log(str);
+            if (str) {
+                let arr = str.split('&').reverse();
+                console.log(arr);
+                arr.forEach(item => {
+                    ajax({
+                        type: 'get',
+                        url: '../api/zuji.php',
+                        data: {
+                            type: 'set',
+                            num: item
+                        },
+                        success: str => {
+                            if (str != 'yes') {
+                                alert('插入失败');
+                            } else {
+                                localStorage.removeItem('gid');
+                                ajax({
+                                    type: 'get',
+                                    url: '../api/zuji.php',
+                                    data: {
+                                        type: 'get'
+                                    },
+                                    success: str1 => {
+                                        let arr1 = JSON.parse(str1);
+                                        // console.log(arr);
+                                        // console.log(arr[0].img);
+                                        arr1 = arr1.reverse();
+                                        if (arr1.length > 8) {
+                                            arr1 = arr1.slice(0, 8);
+                                        }
+                                        let html = arr1.map((item, index) => {
+                                            return `<li data-gid = ${item.gid}>
+                                                        <img src="${item.img.split('&')[0]}" alt="">
+                                                        <h2>${item.name}</h2>
+                                                        <p>￥ ${item.price}</p>
+                                                    </li>`;
+                                        }).join('');
+                                        hsy.innerHTML = html;
+                                    }
+                                });
+                            }
+                        }
+                    });
+                });
+            }
+        }
+        setzuji();
+
+        // function getzuji() {
+
+        // }
+        // getzuji();
+
+        hsy.onclick = ev => {
+            let id = '';
+            if (ev.target.tagName.toLowerCase() == 'li') {
+                id = ev.target.dataset.gid;
+                // console.log(id);
+            } else {
+                id = ev.target.parentNode.dataset.gid;
+                // console.log(id);
+            }
+            window.open('详情页.html?id=' + id);
+            localStorage.gid = id;
+            setzuji();
+            // getzuji();
+        }
+
+        // console.log(url);
+        var obj = {};//用来接收要渲染的数据
+        ajax({
+            type: 'get',
+            url: '../api/xq.php',
+            data: {
+                id: url.id
+            },
+            success: str => {
+                let arr = JSON.parse(str);
+                // console.log(arr);
+                let arrI = arr[0].imgsrc.split('&');
+                // console.log(arrI);
+                let html = `<div id="left">
+                                <div class="img">
+                                    <img src="${arrI[0]}"
+                                        alt="">
+                                    <div class="shade"></div>
+                                    <div class="bigger">
+                                        <div>
+                                            <img src="${arrI[0]}"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="botbox">
+                                    <input type="button" value="&lt;" class="prev">
+                                        <div class="leftbot">
+                                            <ul class='smallPic'>
+                                            </ul>
+                                        </div>
+                                    <input type="button" value="&gt;" class="next">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h2>${arr[0].name}</h2>
+                                <div class="right-top">
+                                    <div>
+                                        <p>
+                                            <span>价格</span>
+                                            <span id="price">￥${(arr[0].price - 0).toFixed(2)}</span>
+                                        </p>
+                                        <p>
+                                            <span>14<br>累计评论</span>
+                                            <span>${arr[0].buynum}<br>交易成功</span>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <span>运费</span>
+                                        <span id="ard">${arr[0].ard} 至 </span>
+                                        <select name="" id="">
+                                            <option value="gdgd">广东广州</option>
+                                        </select>
+                                        <span>快递: ￥0.00</span>
+                                    </div>
+                                </div>
+                                <form action="">
+                                    <fieldset>
+                                        <legend>尺码助手</legend>
+                                        <div id='list1'>
+                                            <p>尺码</p>
+                                            <span class="btn">S</span>
+                                            <span class="btn">M</span>
+                                        </div>
+                                        <div id='list2'>
+                                            <p>颜色</p>
+                                            <span class="btn">暗玫紫</span>
+                                            <span class="btn">香芒黄</span>
+                                        </div>
+                                        <div>
+                                            <span>数量</span>
+                                            <input type="button" value="-" id="dis">
+                                            <input type="text" id="num" value="1">
+                                            <input type="button" value="+" id="add">
+                                            <span> 件 (库存<i id='stock'>20</i>件)</span>
+                                        </div>
+                                        <div>
+                                            <span>总价格:</span><span id="total">￥${(arr[0].price - 0).toFixed(2)}</span>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <div class="buy">
+                                    <div id="buy">立即购买</div>
+                                    <div id="put">加入购物车</div>
+                                    <p>
+                                        <span>承诺</span>
+                                        <span>7天无理由</span>
+                                    </p>
+                                    <p>
+                                        <span>支付 </span>
+                                        <span>蚂蚁花呗 </span>
+                                        <span>信用卡支付 </span>
+                                        <span>集分宝</span>
+                                    </p>
+                                </div>
+                            </div>`;
+                good.innerHTML = html;
+
+                //渲染完咯再重新找节点
+                let aBtn1 = document.querySelectorAll('#list1 .btn');
+                let aBtn2 = document.querySelectorAll('#list2 .btn');
+                let total = getid('total');
+                let price = getid('price');
+                let add = getid('add');
+                let dis = getid('dis');
+                let num = getid('num');
+                let smallPic = document.querySelectorAll('#smallPic li');
+                let sto = getid('stock');
+                let left = getid('left');
+                let buy = getid('buy');
+                let put = getid('put');
+                let size = '';
+                let color = '';
+
+                belarge({
+                    ele: 'left',
+                    imgsrc: arrI,
+                    speed: 2
+                });
+
+                put.onclick = () => {//点击加入购物车按钮
+                    let num1 = num.value;
+                    if (size && color) {
+                        let obj = {
+                            gid: url.id,
+                            size: size,
+                            color: color,
+                            num: num1,
+                            uname: 'test'
+                        }
+                        // console.log(obj);
+                        toCar(obj);
+                    } else {
+                        alert('请先选择码数和颜色！')
+                    }
+                }
+
+                buy.onclick = () => {//点击加入购物车按钮
+                    let num1 = num.value;
+                    if (size && color) {
+                        let obj = {
+                            gid: url.id,
+                            size: size,
+                            color: color,
+                            num: num1,
+                            uname: 'test'
+                        }
+                                                // console.log(obj);
+                        toCar(obj);
+                        window.open('shoppingCar.html');   //跳转到购买页面
+                    } else {
+                        alert('请先选择码数和颜色！')
+                    }
+                }
+
+
+                //码数和颜色那里的高亮处理
+                for (var i = 0; i < aBtn1.length; i++) {
+                    aBtn1[i].index = i;
+                    aBtn1[i].onclick = function () {
+                        for (var j = 0; j < aBtn1.length; j++) {//排他
+                            aBtn1[j].className = 'btn';
+                        }
+                        this.className = 'btn active';
+                        size = this.innerHTML;
+                    }
+                }
+
+                for (var i = 0; i < aBtn1.length; i++) {
+                    aBtn2[i].index = i;
+                    aBtn2[i].onclick = function () {
+                        for (var j = 0; j < aBtn2.length; j++) {//排他
+                            aBtn2[j].className = 'btn';
+                        }
+                        this.className = 'btn active';
+                        color = this.innerHTML;
+                    }
+                }
+
+                //add的点击事件
+                add.onclick = function () {
+                    var num1 = num.value;
+                    var sto1 = sto.innerHTML;
+                    var pri = price.innerHTML;
+                    console.log(num1, sto1, pri.slice(1));
+                    num1++;
+                    if (num1 >= sto1) {
+                        num1 = sto1;
+                    }
+                    num.value = num1;
+                    total.innerHTML = '￥' + (num1 * pri.slice(1)).toFixed(2);
+                }
+
+                //dis的点击事件
+                dis.onclick = function () {
+                    var num1 = num.value;
+                    var pri = price.innerHTML;
+                    num1--;
+                    if (num1 <= 1) {
+                        num1 = 1;
+                    }
+                    num.value = num1;
+                    total.innerHTML = '￥' + (num1 * pri.slice(1)).toFixed(2);
+                }
+
+                //num输入框事件
+                num.oninput = function () {
+                    var num1 = num.value;
+                    var num2 = 0;
+                    var sto1 = sto.innerHTML - 0;
+                    var pri = price.innerHTML;
+                    if (num1 <= 1) {
+                        num2 = 1;
+                        num.value = 1;
+                    } else if (num1 >= sto1) {
+                        num2 = sto1;
+                        num.value = sto1;
+                    } else {
+                        num2 = num1;
+                        num.value = num1;
+                    }
+                    total.innerHTML = '￥' + (num2 * pri.slice(1)).toFixed(2);
+                }
+            }
+
+        });
+
+
+
+    })();
+</script>
+
+</html>
